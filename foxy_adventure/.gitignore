@@ -1,0 +1,31 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# ==========================================
+# CÁC ĐỀ XUẤT NÊN THÊM VÀO
+# ==========================================
+
+# 1. Thư mục chứa bản build (bạn nên tạo folder tên Builds để xuất game vào đây)
+/Builds/
+/Exports/
+
+# Các file game đã đóng gói (Windows, Android, WebGL,...)
+*.exe
+*.pck
+*.apk
+*.aab
+*.html
+*.wasm
+
+# 2. Cấu hình xuất game (Nơi chứa mật khẩu, key API nhạy cảm)
+export_presets.cfg
+
+# 3. Rác của Hệ điều hành
+Thumbs.db
+.DS_Store
+
+# 4. File backup/tạm của các phần mềm thiết kế (ví dụ: Aseprite, Photoshop)
+*~
+*.aseprite-backup
+*.tmp
