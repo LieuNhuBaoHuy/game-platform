@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://omun3nby1qdl"]
+[gd_scene load_steps=16 format=3 uid="uid://omun3nby1qdl"]
 
 [ext_resource type="Script" uid="uid://cjyrsrx7kl6bd" path="res://Scripts/base_character.gd" id="1_dsw18"]
 [ext_resource type="Texture2D" uid="uid://b2iyrbygs0b7c" path="res://Assets/fox_hat/fox_idle_1.png" id="2_e35vl"]
@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://3g5hdrfwcd2c" path="res://Assets/fox_hat/fox_run_2.png" id="7_3pbjx"]
 [ext_resource type="Texture2D" uid="uid://cg0s41812vukj" path="res://Assets/fox_hat/fox_run_3.png" id="8_sctna"]
 [ext_resource type="Texture2D" uid="uid://8u26ji11yaua" path="res://Assets/fox_hat/fox_run_4.png" id="9_1yjkl"]
+[ext_resource type="Script" uid="uid://c4e2hc7a55lqe" path="res://Scripts/player/States/idle.gd" id="10_sctna"]
+[ext_resource type="Script" uid="uid://shft5poyjhty" path="res://Scripts/player/States/run.gd" id="11_1yjkl"]
+[ext_resource type="Script" uid="uid://0d1pb6cxxdam" path="res://Scripts/player/States/jump.gd" id="12_5562t"]
+[ext_resource type="Script" uid="uid://c0pixp7588peh" path="res://Scripts/player/States/fall.gd" id="13_45p52"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wx5cg"]
 animations = [{
@@ -62,25 +66,38 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f30au"]
+radius = 47.0
+height = 130.0
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_dsw18")
 metadata/_custom_type_script = "uid://cjyrsrx7kl6bd"
 
 [node name="Direction" type="Node2D" parent="."]
+position = Vector2(-289, -60)
+scale = Vector2(1, 1.02405)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Direction"]
-position = Vector2(43, -25)
+position = Vector2(118.625, 40.037)
+scale = Vector2(3.66797, 3.60372)
 sprite_frames = SubResource("SpriteFrames_wx5cg")
-animation = &"fall"
+animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-171, -26)
+shape = SubResource("CapsuleShape2D_f30au")
 
 [node name="States" type="Node" parent="."]
 
 [node name="idle" type="Node" parent="States"]
+script = ExtResource("10_sctna")
 
 [node name="run" type="Node" parent="States"]
+script = ExtResource("11_1yjkl")
 
 [node name="jump" type="Node" parent="States"]
+script = ExtResource("12_5562t")
 
 [node name="fall" type="Node" parent="States"]
+script = ExtResource("13_45p52")
