@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=3 uid="uid://omun3nby1qdl"]
+
+[ext_resource type="Script" uid="uid://cjyrsrx7kl6bd" path="res://Scripts/base_character.gd" id="1_dsw18"]
+[ext_resource type="Texture2D" uid="uid://b2iyrbygs0b7c" path="res://Assets/fox_hat/fox_idle_1.png" id="2_e35vl"]
+[ext_resource type="Texture2D" uid="uid://6gko14qsmmw4" path="res://Assets/fox_hat/fox_fall_1.png" id="2_f30au"]
+[ext_resource type="Texture2D" uid="uid://c8uke6n7xj17g" path="res://Assets/fox_hat/fox_idle_2.png" id="3_vitwr"]
+[ext_resource type="Texture2D" uid="uid://b7ko4rnci3koo" path="res://Assets/fox_hat/fox_jump_1.png" id="5_qhn4q"]
+[ext_resource type="Texture2D" uid="uid://cseha0dkj5lfj" path="res://Assets/fox_hat/fox_run_1.png" id="6_flr57"]
+[ext_resource type="Texture2D" uid="uid://3g5hdrfwcd2c" path="res://Assets/fox_hat/fox_run_2.png" id="7_3pbjx"]
+[ext_resource type="Texture2D" uid="uid://cg0s41812vukj" path="res://Assets/fox_hat/fox_run_3.png" id="8_sctna"]
+[ext_resource type="Texture2D" uid="uid://8u26ji11yaua" path="res://Assets/fox_hat/fox_run_4.png" id="9_1yjkl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wx5cg"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_f30au")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e35vl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vitwr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_qhn4q")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_flr57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3pbjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sctna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1yjkl")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_dsw18")
+metadata/_custom_type_script = "uid://cjyrsrx7kl6bd"
+
+[node name="Direction" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Direction"]
+position = Vector2(43, -25)
+sprite_frames = SubResource("SpriteFrames_wx5cg")
+animation = &"fall"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="States" type="Node" parent="."]
+
+[node name="idle" type="Node" parent="States"]
+
+[node name="run" type="Node" parent="States"]
+
+[node name="jump" type="Node" parent="States"]
+
+[node name="fall" type="Node" parent="States"]
