@@ -1,5 +1,5 @@
 class_name States
-
+const player = "player"
 const idle = "idle"
 const run = "run"
 const jump = "jump"

@@ -68,25 +68,25 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f30au"]
-radius = 47.0
-height = 130.0
+radius = 11.0
+height = 32.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_1yjkl")
 metadata/_custom_type_script = "uid://cjyrsrx7kl6bd"
 
 [node name="Direction" type="Node2D" parent="."]
-position = Vector2(-289, -60)
+position = Vector2(-185, -8)
 scale = Vector2(1, 1.02405)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Direction"]
-position = Vector2(118.625, 40.037)
-scale = Vector2(3.66797, 3.60372)
+z_index = 10
+scale = Vector2(1.014, 1)
 sprite_frames = SubResource("SpriteFrames_wx5cg")
 animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-171, -26)
+position = Vector2(-185, -10)
 shape = SubResource("CapsuleShape2D_f30au")
 
 [node name="States" type="Node" parent="."]
@@ -106,3 +106,4 @@ script = ExtResource("13_45p52")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-187, -8)
+zoom = Vector2(2, 2)
