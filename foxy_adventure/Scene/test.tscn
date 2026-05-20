@@ -21,6 +21,7 @@ position = Vector2(-135.75, 345)
 shape = SubResource("RectangleShape2D_m7naw")
 
 [node name="Ground2" type="StaticBody2D" parent="."]
+position = Vector2(15, 11)
 
 [node name="ColorRect" type="ColorRect" parent="Ground2"]
 offset_left = 125.0
@@ -33,4 +34,4 @@ position = Vector2(308, 411)
 shape = SubResource("RectangleShape2D_m7naw")
 
 [node name="Player" parent="." instance=ExtResource("1_wsa5o")]
-position = Vector2(99, 214)
+position = Vector2(316, 233)

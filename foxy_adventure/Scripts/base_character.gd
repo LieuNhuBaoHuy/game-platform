@@ -18,22 +18,21 @@ var _next_animated_sprite: AnimatedSprite2D = null
 func _ready() -> void:
 	set_animated_sprite($Direction/AnimatedSprite2D)
 func _physics_process(delta: float) -> void:
-	# Animation
-	_check_changed_animation()
 	if fsm != null:
 		fsm._update(delta)
-	# Movement
-	_update_movement(delta)
 	# Direction
 	_check_changed_direction()
+	# Animation
+	_check_changed_animation()
+	# Movement
+	_update_movement(delta)
 func _update_movement(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	move_and_slide()
 func turn_around() -> void:
-	if _next_direction != direction:
-		return
-	_next_direction = -direction
+	if _next_direction == direction:
+		_next_direction = -direction
 func is_left() -> bool:
 	return direction == -1
 func is_right() -> bool:
@@ -46,7 +45,6 @@ func jump() -> void:
 	velocity.y = -jump_speed
 func stop_move() -> void:
 	velocity.x = 0
-	velocity.y = 0
 # Change the animation of the character on the next frame
 func change_animation(new_animation: String) -> void:
 	_next_animation = new_animation
@@ -78,9 +76,8 @@ func _check_changed_direction() -> void:
 	if _next_direction != direction:
 		direction = _next_direction
 		_on_changed_direction()
-		if direction == -1:
-			$Direction.scale.x = -1
-		if direction == 1:
-			$Direction.scale.x = 1
+		$Direction/AnimatedSprite2D.flip_h = direction == -1
 func _on_changed_direction() -> void:
 	pass
+func move() -> void:
+	velocity.x = direction * movement_speed
