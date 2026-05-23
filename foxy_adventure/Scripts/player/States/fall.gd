@@ -11,7 +11,6 @@ func _update(_delta: float) -> void:
 	var right := Input.get_action_strength(States.move_right)
 	var left := Input.get_action_strength(States.move_left)
 	var direction := int(right - left)
-	obj.move()
 	if direction < 0:
 		obj.turn_left()
 	elif direction > 0:
