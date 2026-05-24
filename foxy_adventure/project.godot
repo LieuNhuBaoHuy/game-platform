@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="Foxy_Adventure"
-run/main_scene="uid://djprsheu0fmdy"
+run/main_scene="uid://cwbwocyphy2tv"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 InventorySystem="*res://Scripts/Inventory/InventorySystem.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/SpriteSheetImporter/plugin.cfg")
 
 [input]
 
