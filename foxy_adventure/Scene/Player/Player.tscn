@@ -108,3 +108,5 @@ script = ExtResource("13_45p52")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-187, -8)
 zoom = Vector2(2, 2)
+process_callback = 0
+position_smoothing_enabled = true
