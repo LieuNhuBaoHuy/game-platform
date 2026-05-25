@@ -36,3 +36,17 @@ func die():
 	GameManager.current_spawn_id = MapKey.hub
 	get_tree().change_scene_to_file(hub_scene)
 	
+@export var max_jumps : int = 2
+var jump_count : int = 0
+
+func _physics_process(delta):
+	super(delta)
+	if is_on_floor():
+		jump_count = 0
+		
+func jump():
+	if jump_count >= max_jumps:
+		return
+	super()
+	jump_count += 1
+	
