@@ -1,6 +1,7 @@
 extends Area2D
 
 @export_file("*.tscn") var next_scene_path: String
+@export var target_spawn_id : String
 var player_inside := false
 
 func _ready():
@@ -10,6 +11,7 @@ func _ready():
 func _process(delta):
 	if player_inside and Input.is_action_just_pressed(ButtonKey.interact):
 		print(next_scene_path)
+		GameManager.current_spawn_id = target_spawn_id
 		get_tree().change_scene_to_file(next_scene_path)
 
 func _on_body_entered(body):

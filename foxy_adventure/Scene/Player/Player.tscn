@@ -74,6 +74,7 @@ height = 32.0
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 position = Vector2(776, 388)
 script = ExtResource("1_1yjkl")
+hub_scene = "uid://dpv3imscyvm2n"
 metadata/_custom_type_script = "uid://cjyrsrx7kl6bd"
 
 [node name="Direction" type="Node2D" parent="."]

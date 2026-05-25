@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpv3imscyvm2n"]
+[gd_scene load_steps=8 format=3 uid="uid://dpv3imscyvm2n"]
 
 [ext_resource type="PackedScene" uid="uid://omun3nby1qdl" path="res://Scene/Player/Player.tscn" id="1_6rhyq"]
 [ext_resource type="PackedScene" uid="uid://bg68t06uajlbx" path="res://Scene/Door.tscn" id="2_yqrtk"]
 [ext_resource type="Texture2D" uid="uid://v2dtejovry7r" path="res://Assets/island/terrain/terrain_32x32.png" id="3_nrudq"]
+[ext_resource type="PackedScene" uid="uid://dtijd0383er0r" path="res://Scene/Objects/SpawnPoint.tscn" id="4_nrudq"]
+[ext_resource type="PackedScene" uid="uid://bqqdx5wfv8j4b" path="res://Scene/Objects/DeathZone.tscn" id="5_kk6us"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kk6us"]
 texture = ExtResource("3_nrudq")
@@ -208,11 +210,12 @@ sources/0 = SubResource("TileSetAtlasSource_kk6us")
 [node name="Hub" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_6rhyq")]
-position = Vector2(696, 307)
+position = Vector2(699, 314)
 
 [node name="Door1" parent="." instance=ExtResource("2_yqrtk")]
-position = Vector2(305, 126)
+position = Vector2(304, 126)
 next_scene_path = "uid://dv2a0ritpv364"
+target_spawn_id = "map1_spawn"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4hnli")
@@ -226,3 +229,10 @@ next_scene_path = "uid://bk45egx06iwox"
 [node name="Door3" parent="." instance=ExtResource("2_yqrtk")]
 position = Vector2(588, 127)
 next_scene_path = "uid://2f7eyimky740"
+
+[node name="ResetPosition2" parent="." groups=["spawnpoint"] instance=ExtResource("4_nrudq")]
+position = Vector2(592, 313)
+spawn_id = "hub_scene"
+
+[node name="DeathZone" parent="." instance=ExtResource("5_kk6us")]
+position = Vector2(258, 281)
