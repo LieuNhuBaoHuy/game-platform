@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Object_Data" load_steps=2 format=3 uid="uid://cuhbfeevvq3a3"]
+
+[ext_resource type="Script" uid="uid://cvd6160ujjt3w" path="res://Scripts/Resource/Object/Object.gd" id="1_kodv8"]
+
+[resource]
+script = ExtResource("1_kodv8")
+IDObject = 0
+ObjectName = ""
+metadata/_custom_type_script = "uid://cvd6160ujjt3w"

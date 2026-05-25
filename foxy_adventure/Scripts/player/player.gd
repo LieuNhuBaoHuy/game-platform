@@ -5,6 +5,13 @@ extends BaseCharacter
 func _ready() -> void:
 	fsm = FSM.new(self, $States, $States/Idle)
 	super()
+	await get_tree().process_frame
+	if GameManager.current_spawn_id == "":
+		GameManager.current_spawn_id = MapKey.hub
+	for spawn in get_tree().get_nodes_in_group(MapKey.point):
+		if spawn.spawn_id == GameManager.current_spawn_id:
+			global_position = spawn.global_position
+			break
 	
 
 func _update_movement(delta: float) -> void:
@@ -23,3 +30,23 @@ func _update_movement(delta: float) -> void:
 			
 			# Tác dụng lực đẩy
 			collider.apply_central_impulse(push_dir * push_force)
+			
+@export_file("*.tscn") var hub_scene : String
+func die():
+	GameManager.current_spawn_id = MapKey.hub
+	get_tree().change_scene_to_file(hub_scene)
+	
+@export var max_jumps : int = 2
+var jump_count : int = 0
+
+func _physics_process(delta):
+	super(delta)
+	if is_on_floor():
+		jump_count = 0
+		
+func jump():
+	if jump_count >= max_jumps:
+		return
+	super()
+	jump_count += 1
+	
