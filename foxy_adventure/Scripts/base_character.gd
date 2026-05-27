@@ -2,10 +2,10 @@ class_name BaseCharacter
 extends CharacterBody2D
 
 ##export để có thể chỉnh thông số qua inspector.
-@export var movement_speed: float = 150.0 
+@export var movement_speed: float = 100.0 
 @export var gravity: float = 700.0
 @export var direction: int = 1
-@export var jump_speed: float = 250.0
+@export var jump_speed: float = 200.0
 
 ##chỉnh bằng code
 var fsm: FSM = null
