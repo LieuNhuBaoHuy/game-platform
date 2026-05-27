@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 InventorySystem="*res://Scripts/Inventory/InventorySystem.gd"
 GameManager="*res://Scripts/GameManager.gd"
+EventSystem="*res://Scripts/Event/EventSystem.gd"
+InitializeScene="*res://Scene/MyMap/InitializeScene.tscn"
 
 [editor_plugins]
 

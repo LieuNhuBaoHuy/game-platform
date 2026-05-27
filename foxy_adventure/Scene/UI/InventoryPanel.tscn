@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://c0kdjp8vyj6du" path="res://Assets/Inventory/Button1.png" id="7_f6fnf"]
 
 [sub_resource type="FontFile" id="FontFile_mceei"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/20/0/ascent = 0.0
 cache/0/20/0/descent = 0.0
 cache/0/20/0/underline_position = 0.0
@@ -174,28 +177,13 @@ theme_override_font_sizes/font_size = 10
 text = "Use to upgrade speed"
 horizontal_alignment = 1
 
-[node name="ThrowButton" type="Button" parent="UI_Panel/TextureRect"]
-layout_mode = 0
-offset_left = 490.0
-offset_top = 466.0
-offset_right = 538.0
-offset_bottom = 482.0
-theme_override_colors/font_color = Color(1, 0.788235, 0.00392157, 1)
-theme_override_font_sizes/font_size = 8
-theme_override_styles/focus = SubResource("StyleBoxEmpty_sp6lc")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_xy6pw")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_7nw3k")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_tbi77")
-text = "Throw"
-icon = ExtResource("7_f6fnf")
-icon_alignment = 1
-
 [node name="UseButton" type="Button" parent="UI_Panel/TextureRect"]
 layout_mode = 0
-offset_left = 621.0
+offset_left = 545.0
 offset_top = 466.0
-offset_right = 669.0
+offset_right = 593.0
 offset_bottom = 482.0
+scale = Vector2(1.5, 1.2)
 theme_override_colors/font_color = Color(1, 0.788235, 0.00392157, 1)
 theme_override_font_sizes/font_size = 8
 theme_override_styles/focus = SubResource("StyleBoxEmpty_sp6lc")

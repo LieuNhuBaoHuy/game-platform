@@ -5,3 +5,8 @@ class_name Object_Data
 @export var IDObject: int 
 @export var ObjectName: String
 @export var ObjectImage: Texture2D
+@export var ObjectDescription: String 
+@export var CanBeUse: bool
+
+func _use(player: BaseCharacter) -> void:
+	pass
