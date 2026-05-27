@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Object_Data" load_steps=3 format=3 uid="uid://dsn3uvcnbrfei"]
+
+[ext_resource type="Texture2D" uid="uid://coudm0xtfv8" path="res://Assets/Objects/coconut.png" id="1_ulx82"]
+[ext_resource type="Script" uid="uid://cvd6160ujjt3w" path="res://Scripts/Resource/Object/Object.gd" id="1_xxobt"]
+
+[resource]
+script = ExtResource("1_xxobt")
+IDObject = 0
+ObjectName = "Coconut of life"
+ObjectImage = ExtResource("1_ulx82")
+ObjectDescription = "This can be used to boost strength"
+CanBeUse = true
+metadata/_custom_type_script = "uid://cvd6160ujjt3w"

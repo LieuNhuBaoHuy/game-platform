@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Buff_Object" load_steps=3 format=3 uid="uid://bghwgofw3nmq3"]
+
+[ext_resource type="Texture2D" uid="uid://coudm0xtfv8" path="res://Assets/Objects/coconut.png" id="1_v4je1"]
+[ext_resource type="Script" uid="uid://vom357j0sjcg" path="res://Scripts/Resource/Object/Buff_Object.gd" id="1_wblhq"]
+
+[resource]
+script = ExtResource("1_wblhq")
+value = 20.0
+buff_type = 1
+IDObject = 2
+ObjectName = "Coconut of life"
+ObjectImage = ExtResource("1_v4je1")
+ObjectDescription = "This can be used to boost strength"
+CanBeUse = true
+metadata/_custom_type_script = "uid://vom357j0sjcg"

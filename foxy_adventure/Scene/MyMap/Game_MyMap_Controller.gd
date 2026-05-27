@@ -4,8 +4,11 @@ class_name Game_MyMap_Controller
 static var instance: Game_MyMap_Controller
 
 @export var player_camera: Camera2D
+@export var player_instance: BaseCharacter
 
 func _ready() -> void:
+	player_instance = get_parent().get_node("Player") as BaseCharacter
+	
 	_SetCamera()
 	_SetCameraLimit(327, -100, 517, 10000000000)
 

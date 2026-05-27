@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjc83s4kc5au0"]
+[gd_scene load_steps=4 format=3 uid="uid://cjc83s4kc5au0"]
 
 [ext_resource type="Texture2D" uid="uid://dyipo0gbwame8" path="res://Assets/Inventory/Button.png" id="1_ce5md"]
+[ext_resource type="Script" uid="uid://birqfu3y4om5e" path="res://Scene/UI/InventorySlot.gd" id="2_d8qlf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ce5md"]
 
@@ -35,3 +36,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_ce5md")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_d8qlf")
+
+[connection signal="pressed" from="Frame/Button" to="Frame/Button" method="_on_pressed"]

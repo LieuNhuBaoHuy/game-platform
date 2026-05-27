@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn5nwrsyrl831"]
+
+[ext_resource type="Script" uid="uid://dty3pri0m8jbk" path="res://Scripts/Dictionary/ObjectDictionary.gd" id="1_cadhk"]
+[ext_resource type="Script" uid="uid://cvd6160ujjt3w" path="res://Scripts/Resource/Object/Object.gd" id="2_co3ix"]
+[ext_resource type="Resource" uid="uid://bghwgofw3nmq3" path="res://Resources/Items/Coconut2.tres" id="3_co3ix"]
+
+[node name="InitializeScene" type="Node2D"]
+script = ExtResource("1_cadhk")
+item_resources = Array[ExtResource("2_co3ix")]([ExtResource("3_co3ix")])

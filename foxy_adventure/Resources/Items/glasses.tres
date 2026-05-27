@@ -6,4 +6,5 @@
 script = ExtResource("1_5cdtd")
 IDObject = 0
 ObjectName = ""
+ObjectDescription = ""
 metadata/_custom_type_script = "uid://cvd6160ujjt3w"
