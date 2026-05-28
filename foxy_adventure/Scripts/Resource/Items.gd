@@ -9,5 +9,6 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.is_in_group(States.player):
+		sfx.play("res://Assets/audio/sfx/collect/coin.mp3", 2.0)
 		InventorySystem.AddInventory(item_data)
 		queue_free()

@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=4 uid="uid://qs83wwuuvevi"]
+[gd_scene load_steps=30 format=4 uid="uid://qs83wwuuvevi"]
 
 [ext_resource type="TileSet" uid="uid://c2m21y0kpjiid" path="res://Assets/island/tilteset.tres" id="1_cia1c"]
+[ext_resource type="Script" uid="uid://b60x00502l180" path="res://Scripts/Music/MusicScene.gd" id="1_n4u31"]
 [ext_resource type="PackedScene" uid="uid://omun3nby1qdl" path="res://Scene/Player/Player.tscn" id="2_n7bu6"]
 [ext_resource type="PackedScene" uid="uid://bg68t06uajlbx" path="res://Scene/Door.tscn" id="3_un01h"]
 [ext_resource type="Texture2D" uid="uid://dcrnqve71d36p" path="res://Assets/island/background/additional_sky.png" id="4_v10cp"]
@@ -12,11 +13,46 @@
 [ext_resource type="PackedScene" uid="uid://wgnfgc6xgdhs" path="res://Scene/Objects/Treasure.tscn" id="10_qs7g1"]
 [ext_resource type="PackedScene" uid="uid://bdqtqtsmjqjto" path="res://Scene/Enemy/Enemy.tscn" id="11_5yrhn"]
 [ext_resource type="PackedScene" uid="uid://bpgi87bus7grr" path="res://Scene/Objects/Key.tscn" id="12_1lkds"]
+[ext_resource type="PackedScene" uid="uid://hd35mbga866d" path="res://Scene/Sound/SFX.tscn" id="13_fsxuk"]
+[ext_resource type="PackedScene" uid="uid://dla01b042144" path="res://Scene/Sound/MusicManager.tscn" id="15_4m4jl"]
+[ext_resource type="PackedScene" uid="uid://c2muns85ie6fd" path="res://Scene/UI/InventoryPanel.tscn" id="16_kk54w"]
+[ext_resource type="Texture2D" uid="uid://b1kigincwb48u" path="res://Assets/Inventory/Book_2.png" id="17_ijrmf"]
+[ext_resource type="PackedScene" uid="uid://cjc83s4kc5au0" path="res://Scene/UI/InventorySlot.tscn" id="18_gcx04"]
+[ext_resource type="Texture2D" uid="uid://dewm8koev7sdq" path="res://Assets/Inventory/Frame1.png" id="19_kwhrt"]
+[ext_resource type="Texture2D" uid="uid://cw114pju0kuli" path="res://Assets/Inventory/Frame2.png" id="20_3b3b4"]
+[ext_resource type="Texture2D" uid="uid://6gko14qsmmw4" path="res://Assets/fox_hat/fox_fall_1.png" id="21_uxjv8"]
+[ext_resource type="Texture2D" uid="uid://drhnrad6nwhjs" path="res://Assets/Inventory/Frame3.png" id="22_6vnco"]
+[ext_resource type="Texture2D" uid="uid://c0kdjp8vyj6du" path="res://Assets/Inventory/Button1.png" id="23_74u7n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61nh2"]
 size = Vector2(215, 92)
 
+[sub_resource type="FontFile" id="FontFile_ta3nl"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ls18l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_02223"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkvmy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rgcgx"]
+
 [node name="Khanh" type="Node2D"]
+script = ExtResource("1_n4u31")
+bg_music = "uid://0cu2yfdmugja"
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 offset = Vector2(-500, 0)
@@ -42,6 +78,19 @@ position = Vector2(384.5, 404.5)
 scale = Vector2(23.969, 5.596)
 texture = ExtResource("6_61nh2")
 
+[node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
+offset = Vector2(400, -200)
+transform = Transform2D(1, 0, 0, 1, 400, -200)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground4"]
+motion_scale = Vector2(0.001, 0.8)
+motion_mirroring = Vector2(767, 0)
+
+[node name="Sky" type="Sprite2D" parent="ParallaxBackground4/ParallaxLayer"]
+position = Vector2(417, -11)
+scale = Vector2(26.15, 20.53)
+texture = ExtResource("4_v10cp")
+
 [node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
 offset = Vector2(0, -200)
 transform = Transform2D(1, 0, 0, 1, 0, -200)
@@ -60,41 +109,6 @@ position = Vector2(0, 57)
 scale = Vector2(2, 2)
 texture = ExtResource("5_niiwe")
 centered = false
-
-[node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
-offset = Vector2(400, -200)
-transform = Transform2D(1, 0, 0, 1, 400, -200)
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground4"]
-motion_scale = Vector2(0.001, 0.8)
-motion_mirroring = Vector2(767, 0)
-
-[node name="Sky" type="Sprite2D" parent="ParallaxBackground4/ParallaxLayer"]
-position = Vector2(417, -11)
-scale = Vector2(26.15, 20.53)
-texture = ExtResource("4_v10cp")
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.001, 0.8)
-motion_mirroring = Vector2(767, 0)
-
-[node name="Sky" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(417, -11)
-scale = Vector2(26.15, 20.53)
-texture = ExtResource("4_v10cp")
-
-[node name="Sea" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(0, 57)
-scale = Vector2(2, 2)
-texture = ExtResource("5_niiwe")
-centered = false
-
-[node name="Water" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(384.5, 404.5)
-scale = Vector2(23.969, 5.596)
-texture = ExtResource("6_61nh2")
 
 [node name="ParallaxBackground5" type="ParallaxBackground" parent="."]
 offset = Vector2(500, 0)
@@ -116,6 +130,28 @@ texture = ExtResource("5_niiwe")
 centered = false
 
 [node name="Water" type="Sprite2D" parent="ParallaxBackground5/ParallaxLayer"]
+position = Vector2(384.5, 404.5)
+scale = Vector2(23.969, 5.596)
+texture = ExtResource("6_61nh2")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.001, 0.8)
+motion_mirroring = Vector2(767, 0)
+
+[node name="Sky" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(417, -11)
+scale = Vector2(26.15, 20.53)
+texture = ExtResource("4_v10cp")
+
+[node name="Sea" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(0, 57)
+scale = Vector2(2, 2)
+texture = ExtResource("5_niiwe")
+centered = false
+
+[node name="Water" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(384.5, 404.5)
 scale = Vector2(23.969, 5.596)
 texture = ExtResource("6_61nh2")
@@ -146,7 +182,7 @@ position = Vector2(-101, -208)
 shape = SubResource("RectangleShape2D_61nh2")
 
 [node name="Player" parent="." instance=ExtResource("2_n7bu6")]
-position = Vector2(589, -293)
+position = Vector2(343, 163)
 
 [node name="Door" parent="." instance=ExtResource("3_un01h")]
 position = Vector2(23, -30)
@@ -156,9 +192,11 @@ position = Vector2(221, 146)
 
 [node name="Enemy" parent="." instance=ExtResource("11_5yrhn")]
 position = Vector2(357, -59)
+move_distance = 30.0
 
 [node name="Enemy2" parent="." instance=ExtResource("11_5yrhn")]
 position = Vector2(733, -188)
+move_distance = 200.0
 
 [node name="Enemy4" parent="." instance=ExtResource("11_5yrhn")]
 position = Vector2(634, -383)
@@ -189,3 +227,171 @@ position = Vector2(81, -516)
 
 [node name="Key" parent="." instance=ExtResource("12_1lkds")]
 position = Vector2(400, -295)
+
+[node name="sfx" parent="." instance=ExtResource("13_fsxuk")]
+
+[node name="MusicManager" parent="." instance=ExtResource("15_4m4jl")]
+
+[node name="InventoryPanel" parent="." instance=ExtResource("16_kk54w")]
+
+[node name="UI_Panel2" type="Control" parent="InventoryPanel"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/UI_Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_ijrmf")
+
+[node name="Control" parent="InventoryPanel/UI_Panel2/TextureRect" instance=ExtResource("18_gcx04")]
+layout_mode = 1
+offset_left = -284.0
+offset_top = -157.0
+offset_right = -284.0
+offset_bottom = -157.0
+
+[node name="Control2" parent="InventoryPanel/UI_Panel2/TextureRect" instance=ExtResource("18_gcx04")]
+layout_mode = 1
+offset_left = -214.0
+offset_top = -157.0
+offset_right = -214.0
+offset_bottom = -157.0
+
+[node name="Control3" parent="InventoryPanel/UI_Panel2/TextureRect" instance=ExtResource("18_gcx04")]
+layout_mode = 1
+offset_left = -144.0
+offset_top = -157.0
+offset_right = -144.0
+offset_bottom = -157.0
+
+[node name="Control4" parent="InventoryPanel/UI_Panel2/TextureRect" instance=ExtResource("18_gcx04")]
+layout_mode = 1
+offset_left = -74.0
+offset_top = -157.0
+offset_right = -74.0
+offset_bottom = -157.0
+
+[node name="Control5" parent="InventoryPanel/UI_Panel2/TextureRect" instance=ExtResource("18_gcx04")]
+layout_mode = 1
+offset_left = -74.0
+offset_top = -87.0
+offset_right = -74.0
+offset_bottom = -87.0
+
+[node name="Control6" parent="InventoryPanel/UI_Panel2/TextureRect" instance=ExtResource("18_gcx04")]
+layout_mode = 1
+offset_left = -144.0
+offset_top = -87.0
+offset_right = -144.0
+offset_bottom = -87.0
+
+[node name="Control7" parent="InventoryPanel/UI_Panel2/TextureRect" instance=ExtResource("18_gcx04")]
+layout_mode = 1
+offset_left = -214.0
+offset_top = -87.0
+offset_right = -214.0
+offset_bottom = -87.0
+
+[node name="Control8" parent="InventoryPanel/UI_Panel2/TextureRect" instance=ExtResource("18_gcx04")]
+layout_mode = 1
+offset_left = -284.0
+offset_top = -87.0
+offset_right = -284.0
+offset_bottom = -87.0
+
+[node name="FrameText" type="TextureRect" parent="InventoryPanel/UI_Panel2/TextureRect"]
+layout_mode = 0
+offset_left = 467.0
+offset_top = 95.0
+offset_right = 685.0
+offset_bottom = 166.0
+texture = ExtResource("19_kwhrt")
+
+[node name="NameObject" type="Label" parent="InventoryPanel/UI_Panel2/TextureRect/FrameText"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 20.0
+offset_right = 209.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(1, 0.788235, 0.00392157, 1)
+theme_override_fonts/font = SubResource("FontFile_ta3nl")
+theme_override_font_sizes/font_size = 20
+text = "Coconut of life"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ObjectAvaFrame" type="TextureRect" parent="InventoryPanel/UI_Panel2/TextureRect"]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 165.0
+offset_right = 680.0
+offset_bottom = 365.0
+texture = ExtResource("20_3b3b4")
+
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/UI_Panel2/TextureRect/ObjectAvaFrame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_uxjv8")
+
+[node name="DescriptionFrame" type="TextureRect" parent="InventoryPanel/UI_Panel2/TextureRect"]
+layout_mode = 0
+offset_left = 467.0
+offset_top = 371.0
+offset_right = 687.0
+offset_bottom = 451.0
+texture = ExtResource("22_6vnco")
+
+[node name="Label" type="Label" parent="InventoryPanel/UI_Panel2/TextureRect/DescriptionFrame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -30.0
+offset_right = 91.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Use to upgrade speed"
+horizontal_alignment = 1
+
+[node name="UseButton" type="Button" parent="InventoryPanel/UI_Panel2/TextureRect"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 466.0
+offset_right = 593.0
+offset_bottom = 482.0
+scale = Vector2(1.5, 1.2)
+theme_override_colors/font_color = Color(1, 0.788235, 0.00392157, 1)
+theme_override_font_sizes/font_size = 8
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ls18l")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_02223")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mkvmy")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rgcgx")
+text = "Use"
+icon = ExtResource("23_74u7n")
+icon_alignment = 1
+
+[editable path="InventoryPanel/UI_Panel2/TextureRect/Control"]

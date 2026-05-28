@@ -1,4 +1,5 @@
 extends Node
+class_name SoundManager
 
 
 func play(path: String, volume_db: float = 0.0) -> void:

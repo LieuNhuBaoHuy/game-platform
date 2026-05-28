@@ -46,6 +46,7 @@ func jump():
 	if jump_count >= max_jumps:
 		return
 	super()
+	sfx.play("res://Assets/audio/sfx/player/jump.wav", 2.0)
 	jump_count += 1
 var death_velocity := Vector2.ZERO
 @onready var dead_state = $States/Dead
@@ -53,6 +54,7 @@ func die():
 	if is_dead:
 		return
 	print("Player Dead")
+	sfx.play("res://Assets/audio/sfx/player/die.wav", 0.5)
 	is_dead = true
 	velocity = Vector2.ZERO
 	fsm.change_state(dead_state)
