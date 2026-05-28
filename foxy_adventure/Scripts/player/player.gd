@@ -6,13 +6,6 @@ extends BaseCharacter
 @export var max_jumps : int = 2
 var jump_count : int = 0
 
-# wall side
-@export var wall_slide_speed : float = 60.0
-@export var wall_jump_force_x : float = 250.0
-@export var wall_jump_force_y : float = -400.0
-var wall_jump_timer : float = 0.0
-var is_wall_sliding : bool = false
-
 @export_file("*.tscn") var hub_scene : String
 
 func _ready() -> void:
@@ -28,11 +21,8 @@ func _ready() -> void:
 
 func _physics_process(delta):
 	super(delta)
-	if wall_jump_timer > 0:
-		wall_jump_timer -= delta
 	if is_on_floor():
 		jump_count = 0
-	handle_wall_slide()
 
 func _update_movement(delta: float) -> void:
 	# 1. Gọi super(delta) để BaseCharacter tính toán trọng lực và chạy move_and_slide()
@@ -50,32 +40,8 @@ func _update_movement(delta: float) -> void:
 			# Tác dụng lực đẩy
 			collider.apply_central_impulse(push_dir * push_force)
 
-# wall side
-func handle_wall_slide():
-	is_wall_sliding = false
-	# cooldown sau wall jump
-	if wall_jump_timer > 0:
-		return
-	# đang trên không + chạm tường + đang rơi
-	if not is_on_floor() and is_on_wall() and velocity.y > 0:
-		is_wall_sliding = true
-		jump_count = 1
-		# giảm tốc độ rơi
-		velocity.y = min(velocity.y, wall_slide_speed)
-
 # jump
 func jump():
-	# chống spam wall jump
-	if wall_jump_timer > 0:
-		return
-	# wall jump
-	if is_wall_sliding:
-		var wall_dir = get_wall_normal()
-		velocity.x = wall_dir.x * wall_jump_force_x
-		velocity.y = wall_jump_force_y
-		wall_jump_timer = 0.2
-		is_wall_sliding = false
-		return
 	# double jump
 	if jump_count >= max_jumps:
 		return
