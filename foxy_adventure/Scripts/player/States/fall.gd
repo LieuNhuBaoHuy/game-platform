@@ -6,9 +6,12 @@ extends FSMState
 @onready var jump_state: FSMState = $"../Jump"
 
 func _enter() -> void:
+	print("ENTER FALL")
 	obj.change_animation(States.fall)
 
 func _update(_delta: float) -> void:
+	if obj.is_dead:
+		return
 	var right := Input.get_action_strength(States.move_right)
 	var left := Input.get_action_strength(States.move_left)
 	var direction := int(right - left)

@@ -21,7 +21,7 @@ func _ready() -> void:
 
 func _physics_process(delta):
 	super(delta)
-	if is_on_floor():
+	if is_on_floor() and !is_dead:
 		jump_count = 0
 
 func _update_movement(delta: float) -> void:
@@ -47,7 +47,15 @@ func jump():
 		return
 	super()
 	jump_count += 1
-
+var death_velocity := Vector2.ZERO
+@onready var dead_state = $States/Dead
 func die():
+	if is_dead:
+		return
+	print("Player Dead")
+	is_dead = true
+	velocity = Vector2.ZERO
+	fsm.change_state(dead_state)
+	await get_tree().create_timer(0.75).timeout
 	GameManager.current_spawn_id = MapKey.hub
 	get_tree().change_scene_to_file(hub_scene)

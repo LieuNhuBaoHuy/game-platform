@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://omun3nby1qdl"]
+[gd_scene load_steps=18 format=3 uid="uid://omun3nby1qdl"]
 
 [ext_resource type="Script" uid="uid://ux734dfynkcy" path="res://Scripts/player/player.gd" id="1_1yjkl"]
 [ext_resource type="Texture2D" uid="uid://b2iyrbygs0b7c" path="res://Assets/fox_hat/fox_idle_1.png" id="2_e35vl"]
@@ -14,9 +14,18 @@
 [ext_resource type="Script" uid="uid://shft5poyjhty" path="res://Scripts/player/States/run.gd" id="11_1yjkl"]
 [ext_resource type="Script" uid="uid://0d1pb6cxxdam" path="res://Scripts/player/States/jump.gd" id="12_5562t"]
 [ext_resource type="Script" uid="uid://c0pixp7588peh" path="res://Scripts/player/States/fall.gd" id="13_45p52"]
+[ext_resource type="Script" uid="uid://c86n58i3i022j" path="res://Scripts/player/States/dead.gd" id="15_5562t"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wx5cg"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_f30au")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
 "frames": [],
 "loop": true,
 "name": &"default",
@@ -85,7 +94,7 @@ scale = Vector2(1, 1.02405)
 z_index = 10
 scale = Vector2(1.014, 1)
 sprite_frames = SubResource("SpriteFrames_wx5cg")
-animation = &"run"
+animation = &"dead"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-185, -10)
@@ -105,6 +114,9 @@ script = ExtResource("12_5562t")
 
 [node name="Fall" type="Node2D" parent="States"]
 script = ExtResource("13_45p52")
+
+[node name="Dead" type="Node2D" parent="States"]
+script = ExtResource("15_5562t")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-187, -8)

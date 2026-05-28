@@ -14,17 +14,15 @@ var animated_sprite: AnimatedSprite2D = null
 var _next_animation = null
 var _next_direction: int = 1
 var _next_animated_sprite: AnimatedSprite2D = null
+var is_dead = false
 
 func _ready() -> void:
 	set_animated_sprite($Direction/AnimatedSprite2D)
 func _physics_process(delta: float) -> void:
 	if fsm != null:
 		fsm._update(delta)
-	# Direction
 	_check_changed_direction()
-	# Animation
 	_check_changed_animation()
-	# Movement
 	_update_movement(delta)
 func _update_movement(delta: float) -> void:
 	if not is_on_floor():

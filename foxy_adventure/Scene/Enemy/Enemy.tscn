@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://bdqtqtsmjqjto"]
+
+[ext_resource type="Script" uid="uid://cew64ffqls3n6" path="res://Scripts/Enemy/enemy.gd" id="1_ati8h"]
+[ext_resource type="Texture2D" uid="uid://dw4a7o3e6212e" path="res://Assets/spear/spear_2.png" id="1_nn6od"]
+[ext_resource type="Texture2D" uid="uid://dtnhi5cvb5olu" path="res://Assets/spear/spear_3.png" id="2_ati8h"]
+[ext_resource type="Texture2D" uid="uid://bgitll6fa7qh5" path="res://Assets/spear/spear_4.png" id="3_ined7"]
+[ext_resource type="Texture2D" uid="uid://dcnbb6xcq3kkr" path="res://Assets/spear/spear_5.png" id="4_ihq1d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c0yre"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nn6od")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ati8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ined7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ihq1d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nn6od"]
+radius = 14.0
+height = 36.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ati8h"]
+radius = 22.0
+height = 44.0
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_ati8h")
+
+[node name="Direction" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Direction"]
+position = Vector2(454, 204)
+sprite_frames = SubResource("SpriteFrames_c0yre")
+animation = &"idle"
+frame_progress = 0.2594
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(453, 205)
+shape = SubResource("CapsuleShape2D_nn6od")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(455, 205)
+shape = SubResource("CapsuleShape2D_ati8h")
