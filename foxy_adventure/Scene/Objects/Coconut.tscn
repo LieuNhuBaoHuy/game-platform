@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://tr5ecafdelj3"]
+
+[ext_resource type="Script" uid="uid://cjpbpuqg24r7l" path="res://Scene/Objects/coconut.gd" id="1_fnuxp"]
+[ext_resource type="Texture2D" uid="uid://coudm0xtfv8" path="res://Assets/Objects/coconut.png" id="1_kwp6i"]
+[ext_resource type="Resource" uid="uid://bghwgofw3nmq3" path="res://Resources/Items/Coconut2.tres" id="2_r4v5x"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fnuxp"]
+friction = 0.2
+bounce = 0.4
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r4v5x"]
+radius = 7.07107
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3jrg0"]
+radius = 11.0
+
+[node name="Coconut" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_fnuxp")
+freeze = true
+script = ExtResource("1_fnuxp")
+data = ExtResource("2_r4v5x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kwp6i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_r4v5x")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_3jrg0")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_enter"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_exit"]

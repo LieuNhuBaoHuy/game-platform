@@ -12,3 +12,5 @@ texture = ExtResource("1_j0yt7")
 
 [node name="TopPalmTree" parent="." instance=ExtResource("2_hccgs")]
 position = Vector2(290, 151)
+
+[editable path="TopPalmTree"]

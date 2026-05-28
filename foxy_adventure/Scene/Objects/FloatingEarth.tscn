@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://be1ofbpsxne1j"]
+
+[ext_resource type="TileSet" uid="uid://cxruj6l0kxyg8" path="res://Assets/island/terrain/tileset2.tres" id="1_d8lcl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2mt4"]
+size = Vector2(130, 32)
+
+[node name="FloatingEarth" type="AnimatableBody2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 253, 255, 0, 0, 0, 0, 6, 0, 3, 0, 0, 0, 254, 255, 0, 0, 0, 0, 7, 0, 3, 0, 0, 0, 255, 255, 0, 0, 0, 0, 7, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 3, 0, 0, 0)
+tile_set = ExtResource("1_d8lcl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-32, 16)
+shape = SubResource("RectangleShape2D_t2mt4")
