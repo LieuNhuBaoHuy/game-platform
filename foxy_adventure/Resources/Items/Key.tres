@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Object_Data" load_steps=3 format=3 uid="uid://dthtugqiwxt8i"]
+
+[ext_resource type="Script" uid="uid://cvd6160ujjt3w" path="res://Scripts/Resource/Object/Object.gd" id="1_cha5i"]
+[ext_resource type="Texture2D" uid="uid://bdt6xbymc4vts" path="res://Assets/Objects/Key.png" id="1_g0v2i"]
+
+[resource]
+script = ExtResource("1_cha5i")
+IDObject = 3
+ObjectName = "Bronze Key"
+ObjectImage = ExtResource("1_g0v2i")
+ObjectDescription = "A key to unlock something?"
+CanBeUse = false
+metadata/_custom_type_script = "uid://cvd6160ujjt3w"

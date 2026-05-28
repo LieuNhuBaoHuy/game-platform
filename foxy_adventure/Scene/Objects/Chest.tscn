@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dje7yd60p726d"]
+
+[ext_resource type="Texture2D" uid="uid://cffyphniv2sfh" path="res://Assets/Objects/chest_close_01.png" id="1_06c6o"]
+[ext_resource type="Script" uid="uid://q0mqnlx118es" path="res://Scene/Objects/Chest.gd" id="1_gqgoa"]
+[ext_resource type="Texture2D" uid="uid://dtag6esv8meia" path="res://Assets/Objects/chest_open_03.png" id="2_p1ith"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gqgoa"]
+size = Vector2(36, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1ith"]
+size = Vector2(28, 25)
+
+[node name="Chest" type="StaticBody2D"]
+script = ExtResource("1_gqgoa")
+CheseOpen = ExtResource("2_p1ith")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_gqgoa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_p1ith")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_06c6o")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_enter"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_exit"]

@@ -1,10 +1,16 @@
-[gd_resource type="Resource" script_class="Object_Data" load_steps=2 format=3 uid="uid://dhwmylk6banr6"]
+[gd_resource type="Resource" script_class="Object_Data" load_steps=3 format=3 uid="uid://dhwmylk6banr6"]
 
 [ext_resource type="Script" uid="uid://cvd6160ujjt3w" path="res://Scripts/Resource/Object/Object.gd" id="1_5cdtd"]
+[ext_resource type="Texture2D" uid="uid://15wx3ftgw6oe" path="res://Assets/Objects/glasses-Photoroom.png" id="1_18g43"]
 
 [resource]
 script = ExtResource("1_5cdtd")
+IDObject = 1
+ObjectName = "Kính lúp"
+ObjectImage = ExtResource("1_18g43")
+ObjectDescription = "Dùng để soi "
 IDObject = 0
 ObjectName = ""
 ObjectDescription = ""
+CanBeUse = false
 metadata/_custom_type_script = "uid://cvd6160ujjt3w"

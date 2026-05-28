@@ -16,7 +16,6 @@ func _ready() -> void:
 	EventSystem.inventory_slot_pressed.connect(_on_inventory_slot_pressed)
 	
 	# test
-	InventorySystem.AddInventory(InitializeScene.get_item_by_id(KeyData.Coconut))
 
 func _enter_tree() -> void:
 	# Cấp quyền giám đốc UI khi Map được load
@@ -55,11 +54,11 @@ func _on_inventory_slot_pressed(data: Object_Data) -> void:
 	#hien thi UI 
 	if (data.CanBeUse):
 		UseButton.show()
+		UseButton.pressed.connect(func(): UseButton_Click(data))
 	ObjectName.text = data.ObjectName
 	ObjectDes.text = data.ObjectDescription
 	ObjectAva.texture = data.ObjectImage
 	# truyen nut bam vao day 
-	UseButton.pressed.connect(func(): UseButton_Click(data))
 	pass
 	
 	

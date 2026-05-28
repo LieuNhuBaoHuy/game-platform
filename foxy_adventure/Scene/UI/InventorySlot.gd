@@ -18,6 +18,8 @@ func _setup(data: Object_Data) -> void:
 		await ready
 	
 	if data:
+		self.show()
+		print ("Thành công ", data.IDObject)
 		Data = data
 		icon = Data.ObjectImage
 		self.pressed.connect(_on_pressed)
@@ -30,4 +32,5 @@ func _setup(data: Object_Data) -> void:
 func _on_pressed() -> void:
 	if (Data):
 		#phat tin hieu hien thi UI
+		print ("Click nút ")
 		EventSystem.inventory_slot_pressed.emit(Data)

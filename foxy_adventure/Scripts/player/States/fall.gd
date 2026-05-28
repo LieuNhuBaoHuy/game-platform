@@ -13,11 +13,6 @@ func _update(_delta: float) -> void:
 	var left := Input.get_action_strength(States.move_left)
 	var direction := int(right - left)
 	if Input.is_action_just_pressed(States.jump):
-
-	# đang cooldown wall jump thì bỏ qua
-		if obj.wall_jump_timer > 0:
-			return
-
 		if obj.jump_count < obj.max_jumps:
 			fsm.change_state(jump_state)
 	if direction < 0:
