@@ -33,11 +33,11 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nn6od"]
 radius = 14.0
-height = 36.0
+height = 34.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ati8h"]
-radius = 22.0
-height = 44.0
+radius = 19.0
+height = 40.0
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_ati8h")
@@ -48,7 +48,7 @@ script = ExtResource("1_ati8h")
 position = Vector2(454, 204)
 sprite_frames = SubResource("SpriteFrames_c0yre")
 animation = &"idle"
-frame_progress = 0.2594
+frame_progress = 0.00330735
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(453, 205)
@@ -58,5 +58,5 @@ shape = SubResource("CapsuleShape2D_nn6od")
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(455, 205)
+position = Vector2(456, 203)
 shape = SubResource("CapsuleShape2D_ati8h")
