@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var movement_speed: float = 100.0 
 @export var gravity: float = 700.0
 @export var direction: int = 1
-@export var jump_speed: float = 200.0
+@export var jump_speed: float = 275.0
 
 ##chỉnh bằng code
 var fsm: FSM = null
