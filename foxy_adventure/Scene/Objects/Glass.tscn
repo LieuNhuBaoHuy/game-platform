@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dyhqj82qmbivk"]
+
+[ext_resource type="Script" uid="uid://8qtvqrag2mp7" path="res://Scene/Objects/Glass.gd" id="1_e3gl7"]
+[ext_resource type="Resource" uid="uid://wfgjeesrgpdn" path="res://Resources/Items/Glass.tres" id="2_0c2e7"]
+[ext_resource type="Texture2D" uid="uid://bmx3n1bi6yjph" path="res://Assets/Objects/Glass.png" id="2_e3gl7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0c2e7"]
+radius = 6.0
+height = 24.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r8bsi"]
+radius = 7.0
+height = 28.0
+
+[node name="Glass" type="RigidBody2D"]
+script = ExtResource("1_e3gl7")
+data = ExtResource("2_0c2e7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_e3gl7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_0c2e7")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_r8bsi")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_enter"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_exit"]

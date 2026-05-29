@@ -53,6 +53,7 @@ var death_velocity := Vector2.ZERO
 func die():
 	if is_dead:
 		return
+	InventorySystem.clear_inventory()
 	print("Player Dead")
 	sfx.play("res://Assets/audio/sfx/player/die.wav", 0.5)
 	is_dead = true

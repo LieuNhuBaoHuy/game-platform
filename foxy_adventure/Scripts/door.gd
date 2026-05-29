@@ -5,6 +5,9 @@ extends Area2D
 var player_inside := false
 
 func _ready():
+	var animator = $AnimatedSprite2D
+	if animator:
+		animator.play("default")
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 

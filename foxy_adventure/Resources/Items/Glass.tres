@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GlassesItem" load_steps=3 format=3 uid="uid://wfgjeesrgpdn"]
+
+[ext_resource type="Script" uid="uid://b7p6b3qjj5f1v" path="res://Scripts/Resource/Object/Glasses.gd" id="1_0gx66"]
+[ext_resource type="Texture2D" uid="uid://bmx3n1bi6yjph" path="res://Assets/Objects/Glass.png" id="1_8kp7k"]
+
+[resource]
+script = ExtResource("1_0gx66")
+IDObject = 1
+ObjectName = "The eye of truth"
+ObjectImage = ExtResource("1_8kp7k")
+ObjectDescription = "Something hidden now can be seen."
+CanBeUse = true
+WillBeDelateAfterUse = false
+metadata/_custom_type_script = "uid://b7p6b3qjj5f1v"

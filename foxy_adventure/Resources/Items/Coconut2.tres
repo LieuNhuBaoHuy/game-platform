@@ -12,4 +12,5 @@ ObjectName = "Coconut of life"
 ObjectImage = ExtResource("1_v4je1")
 ObjectDescription = "This can be used to boost strength"
 CanBeUse = true
+WillBeDelateAfterUse = true
 metadata/_custom_type_script = "uid://vom357j0sjcg"

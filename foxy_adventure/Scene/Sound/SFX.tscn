@@ -1,6 +1,6 @@
-[gd_scene load_steps=0 format=3 uid="uid://hd35mbga866d"]
+[gd_scene load_steps=2 format=3 uid="uid://hd35mbga866d"]
 
 [ext_resource type="Script" uid="uid://c6msnl33kr46k" path="res://Scripts/Music/SFX.gd" id="1_1vkp0"]
 
-[node name="Node" type="Node" unique_id=253295282]
+[node name="Node" type="Node"]
 script = ExtResource("1_1vkp0")

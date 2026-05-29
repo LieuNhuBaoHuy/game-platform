@@ -1,7 +1,6 @@
 extends Node2D
-
-class_name UI_MyMap_Controller
-static var instance: UI_MyMap_Controller
+class_name UI_KhanhController
+static var instance: UI_KhanhController
 
 #Declare 
 @export var InventoryPanel: CanvasLayer
@@ -93,7 +92,7 @@ func load_inventory_to_ui() -> void:
 
 func UseButton_Click(data: Object_Data) -> void:
 	if (data):
-		data._use(Game_MyMap_Controller.instance.player_instance)
+		data._use(Game_Khanh_Controller.instance.player_instance)
 		# dung xong thi xoa vat the 
 		if data.WillBeDelateAfterUse:
 			InventorySystem.RemoveInventoryByData(data)

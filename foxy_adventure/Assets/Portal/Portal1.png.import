@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8ct5nkou7iiy"
-path="res://.godot/imported/Cables - Spritesheet 8x8.png-3d98b5172f9f18077feece2fd37cc3cd.ctex"
+uid="uid://balsnprq6ieji"
+path="res://.godot/imported/Portal1.png-f169c0db7e53b107f9040c5fd5c34fa5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/external/Pixel Art - Pipes - FREE/Cables - Spritesheet 8x8.png"
-dest_files=["res://.godot/imported/Cables - Spritesheet 8x8.png-3d98b5172f9f18077feece2fd37cc3cd.ctex"]
+source_file="res://Assets/Portal/Portal1.png"
+dest_files=["res://.godot/imported/Portal1.png-f169c0db7e53b107f9040c5fd5c34fa5.ctex"]
 
 [params]
 
