@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cmleyfjvgfhe4"]
 
+[ext_resource type="Script" uid="uid://dt38c2tb4n221" path="res://Scripts/basement_2.gd" id="1_1mwjp"]
 [ext_resource type="Texture2D" uid="uid://2ydf06eqng5b" path="res://Assets/external/Power-Station-Free-Tileset-Pixel-Art/1 Tiles/Tile_01.png" id="1_i0pel"]
 [ext_resource type="PackedScene" uid="uid://d3mjsoww6hydv" path="res://characters/foxy_player.tscn" id="1_nvjth"]
 [ext_resource type="Texture2D" uid="uid://b35nrcda6m8wo" path="res://Assets/external/Power-Station-Free-Tileset-Pixel-Art/1 Tiles/Tile_10.png" id="2_rolos"]
@@ -1220,6 +1221,7 @@ texture = ExtResource("73_eq0j7")
 sources/0 = SubResource("TileSetAtlasSource_q888v")
 
 [node name="basement_2" type="Node2D" unique_id=1413316639]
+script = ExtResource("1_1mwjp")
 
 [node name="foxy_player" parent="." unique_id=2062767952 instance=ExtResource("1_nvjth")]
 position = Vector2(461, 167)
