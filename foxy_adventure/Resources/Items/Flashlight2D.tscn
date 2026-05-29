@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cm0fk06l1bys8"]
+
+[ext_resource type="Script" uid="uid://delv5cbw54nao" path="res://Scripts/flashlight.gd" id="1_kjmf0"]
+[ext_resource type="Texture2D" uid="uid://dgmfi8rqwe06y" path="res://Assets/external/cone_light/cone_light_flashlight.png" id="2_380js"]
+
+[node name="Flashlight2D" type="Node2D" unique_id=449224485]
+script = ExtResource("1_kjmf0")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=335144075]
+color = Color(1, 1, 0.84705883, 0.78431374)
+energy = 5.0
+shadow_enabled = true
+texture = ExtResource("2_380js")
+texture_scale = 0.5
