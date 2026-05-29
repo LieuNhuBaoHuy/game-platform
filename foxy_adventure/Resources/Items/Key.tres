@@ -10,4 +10,5 @@ ObjectName = "Bronze Key"
 ObjectImage = ExtResource("1_g0v2i")
 ObjectDescription = "A key to unlock something?"
 CanBeUse = false
+WillBeDelateAfterUse = true
 metadata/_custom_type_script = "uid://cvd6160ujjt3w"

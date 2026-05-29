@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://qs83wwuuvevi"]
+[gd_scene load_steps=32 format=4 uid="uid://qs83wwuuvevi"]
 
 [ext_resource type="TileSet" uid="uid://c2m21y0kpjiid" path="res://Assets/island/tilteset.tres" id="1_cia1c"]
 [ext_resource type="Script" uid="uid://b60x00502l180" path="res://Scripts/Music/MusicScene.gd" id="1_n4u31"]
@@ -23,6 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://6gko14qsmmw4" path="res://Assets/fox_hat/fox_fall_1.png" id="21_uxjv8"]
 [ext_resource type="Texture2D" uid="uid://drhnrad6nwhjs" path="res://Assets/Inventory/Frame3.png" id="22_6vnco"]
 [ext_resource type="Texture2D" uid="uid://c0kdjp8vyj6du" path="res://Assets/Inventory/Button1.png" id="23_74u7n"]
+[ext_resource type="Script" uid="uid://bv408msanxplu" path="res://Scene/Maps/UI_KhanhController.gd" id="24_gcx04"]
+[ext_resource type="Script" uid="uid://4q3tx2myikx8" path="res://Scene/Maps/Game_Khanh_Controller.gd" id="25_kwhrt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61nh2"]
 size = Vector2(215, 92)
@@ -233,6 +235,7 @@ position = Vector2(400, -295)
 [node name="MusicManager" parent="." instance=ExtResource("15_4m4jl")]
 
 [node name="InventoryPanel" parent="." instance=ExtResource("16_kk54w")]
+visible = false
 
 [node name="UI_Panel2" type="Control" parent="InventoryPanel"]
 layout_mode = 3
@@ -393,5 +396,18 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_rgcgx")
 text = "Use"
 icon = ExtResource("23_74u7n")
 icon_alignment = 1
+
+[node name="UIController" type="Node2D" parent="." node_paths=PackedStringArray("InventoryPanel", "ObjectName", "ObjectAva", "ObjectDes", "UseButton", "InventoryParent")]
+process_mode = 3
+script = ExtResource("24_gcx04")
+InventoryPanel = NodePath("../InventoryPanel")
+ObjectName = NodePath("../InventoryPanel/UI_Panel2/TextureRect/FrameText/NameObject")
+ObjectAva = NodePath("../InventoryPanel/UI_Panel2/TextureRect/ObjectAvaFrame/TextureRect")
+ObjectDes = NodePath("../InventoryPanel/UI_Panel2/TextureRect/DescriptionFrame/Label")
+UseButton = NodePath("../InventoryPanel/UI_Panel2/TextureRect/UseButton")
+InventoryParent = NodePath("../InventoryPanel/UI_Panel2/TextureRect")
+
+[node name="GameController" type="Node2D" parent="."]
+script = ExtResource("25_kwhrt")
 
 [editable path="InventoryPanel/UI_Panel2/TextureRect/Control"]

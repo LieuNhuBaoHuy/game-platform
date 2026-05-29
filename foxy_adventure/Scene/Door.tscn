@@ -1,22 +1,57 @@
-[gd_scene load_steps=3 format=3 uid="uid://bg68t06uajlbx"]
+[gd_scene load_steps=12 format=3 uid="uid://bg68t06uajlbx"]
 
 [ext_resource type="Script" uid="uid://cgetsuoxpc84t" path="res://Scripts/door.gd" id="1_cu365"]
+[ext_resource type="Texture2D" uid="uid://balsnprq6ieji" path="res://Assets/Portal/Portal1.png" id="2_nmn6n"]
+[ext_resource type="Texture2D" uid="uid://iwpo7prixj6n" path="res://Assets/Portal/Portal2.png" id="3_wptns"]
+[ext_resource type="Texture2D" uid="uid://bhil4861x6wbf" path="res://Assets/Portal/Portal3.png" id="4_qstsp"]
+[ext_resource type="Texture2D" uid="uid://bw2ov078gdkjm" path="res://Assets/Portal/Portal4.png" id="5_18s3q"]
+[ext_resource type="Texture2D" uid="uid://btrjnhwg6n2qx" path="res://Assets/Portal/Portal5.png" id="6_80220"]
+[ext_resource type="Texture2D" uid="uid://dreuywlmtfw0m" path="res://Assets/Portal/Portal6.png" id="7_nnsra"]
+[ext_resource type="Texture2D" uid="uid://ccycppnact56n" path="res://Assets/Portal/Portal7.png" id="8_6lu35"]
+[ext_resource type="Texture2D" uid="uid://dtgnkpik75swv" path="res://Assets/Portal/Portal8.png" id="9_lbbij"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cu365"]
-size = Vector2(48, 54.5)
+size = Vector2(31, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_80220"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nmn6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wptns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qstsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_18s3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_80220")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nnsra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6lu35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lbbij")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Door" type="Area2D"]
 script = ExtResource("1_cu365")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(66, 163.75)
+position = Vector2(1.5, 1)
 shape = SubResource("RectangleShape2D_cu365")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = 1
-
-[node name="ColorRect" type="ColorRect" parent="Sprite2D"]
-offset_left = 40.0
-offset_top = 136.0
-offset_right = 90.0
-offset_bottom = 192.0
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_80220")
+frame_progress = 0.149502

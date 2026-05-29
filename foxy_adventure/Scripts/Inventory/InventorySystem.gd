@@ -33,4 +33,7 @@ func GetObject(id: int) -> Object_Data:
 		
 func get_all_items() -> Array:
 	return ListObject.values()
+
+func clear_inventory() -> void:
+	ListObject.clear()	
 	

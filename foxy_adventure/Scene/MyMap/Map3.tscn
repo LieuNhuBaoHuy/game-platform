@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://cwbwocyphy2tv"]
+[gd_scene load_steps=23 format=4 uid="uid://cwbwocyphy2tv"]
 
 [ext_resource type="TileSet" uid="uid://cxruj6l0kxyg8" path="res://Assets/island/terrain/tileset2.tres" id="1_27og2"]
 [ext_resource type="PackedScene" uid="uid://c4f1jjndyxglw" path="res://Scene/Objects/Grass.tscn" id="1_83s7m"]
@@ -18,8 +18,10 @@
 [ext_resource type="PackedScene" uid="uid://bqqdx5wfv8j4b" path="res://Scene/Objects/DeathZone.tscn" id="10_fnmxj"]
 [ext_resource type="Texture2D" uid="uid://cg54kr8qi1nd2" path="res://Assets/Objects/buttom_pressed.png" id="10_wyq1l"]
 [ext_resource type="PackedScene" uid="uid://tr5ecafdelj3" path="res://Scene/Objects/Coconut.tscn" id="11_3uewj"]
+[ext_resource type="PackedScene" uid="uid://cmfvhfn77d2sb" path="res://Scene/Objects/ButtonTrap1.tscn" id="11_q4sqf"]
 [ext_resource type="PackedScene" uid="uid://dje7yd60p726d" path="res://Scene/Objects/Chest.tscn" id="13_b1v2m"]
-[ext_resource type="PackedScene" uid="uid://dr0w4b22gu5q6" path="res://Scene/Objects/TestObject.tscn" id="15_3lyf1"]
+[ext_resource type="PackedScene" uid="uid://dyhqj82qmbivk" path="res://Scene/Objects/Glass.tscn" id="20_wyq1l"]
+[ext_resource type="PackedScene" uid="uid://cgt1w0v6x36ma" path="res://Scene/Objects/Trap1.tscn" id="22_3hyrt"]
 
 [node name="Map3" type="Node2D"]
 
@@ -40,6 +42,12 @@ position = Vector2(232, 123)
 script = ExtResource("2_s235h")
 coconut = NodePath("../Coconut")
 
+[node name="FullPalmTree2" parent="." instance=ExtResource("1_acht0")]
+position = Vector2(978, -227)
+
+[node name="FullPalmTree3" parent="." instance=ExtResource("1_acht0")]
+position = Vector2(1835, -133)
+
 [node name="Coconut" parent="." instance=ExtResource("11_3uewj")]
 visible = false
 position = Vector2(675, 367)
@@ -57,7 +65,8 @@ position = Vector2(415, 35)
 scale = Vector2(0.6, 0.6)
 
 [node name="Door" parent="." instance=ExtResource("6_h6cba")]
-position = Vector2(3148, -126)
+position = Vector2(3195, 42)
+next_scene_path = "uid://dpv3imscyvm2n"
 
 [node name="ButtonFloatingEarth" parent="." node_paths=PackedStringArray("ground_block") instance=ExtResource("9_wyq1l")]
 position = Vector2(2636, 163)
@@ -65,6 +74,11 @@ scale = Vector2(2, 1.5)
 ground_block = NodePath("../FloatingEarth")
 move_distance = 320.0
 duration = 3.0
+ButtonPress = ExtResource("10_wyq1l")
+
+[node name="ButtonTrap1" parent="." node_paths=PackedStringArray("Spikes") instance=ExtResource("11_q4sqf")]
+position = Vector2(2612, 483)
+Spikes = NodePath("../Trap1")
 ButtonPress = ExtResource("10_wyq1l")
 
 [node name="Player" parent="." instance=ExtResource("1_m7dex")]
@@ -118,7 +132,10 @@ scale = Vector2(8, 1)
 
 [node name="Chest" parent="." instance=ExtResource("13_b1v2m")]
 position = Vector2(1874, 463)
-ItemInside = ExtResource("15_3lyf1")
+ItemInside = ExtResource("20_wyq1l")
+
+[node name="Trap1" parent="." instance=ExtResource("22_3hyrt")]
+position = Vector2(2612, 281)
 
 [connection signal="body_entered" from="FullPalmTree/TopPalmTree/Area2D" to="FullPalmTree" method="_on_body_entered"]
 

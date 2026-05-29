@@ -7,6 +7,8 @@ class_name Object_Data
 @export var ObjectImage: Texture2D
 @export var ObjectDescription: String 
 @export var CanBeUse: bool
+@export var WillBeDelateAfterUse: bool = true
+
 
 func _use(player: BaseCharacter) -> void:
 	pass

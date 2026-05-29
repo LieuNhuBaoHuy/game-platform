@@ -5,12 +5,9 @@
 
 [resource]
 script = ExtResource("1_5cdtd")
-IDObject = 1
-ObjectName = "Kính lúp"
-ObjectImage = ExtResource("1_18g43")
-ObjectDescription = "Dùng để soi "
 IDObject = 0
 ObjectName = ""
+ObjectImage = ExtResource("1_18g43")
 ObjectDescription = ""
 CanBeUse = false
 metadata/_custom_type_script = "uid://cvd6160ujjt3w"
