@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://d3mjsoww6hydv"]
+
+[ext_resource type="Texture2D" uid="uid://bcpoenc50cm6f" path="res://Assets/provided/foxy/foxy/fox/fox_hit_1.png" id="1_8v5jh"]
+[ext_resource type="Script" uid="uid://dds6grh68yxlp" path="res://Scripts/player_control.gd" id="1_nkf0v"]
+[ext_resource type="Texture2D" uid="uid://dkv1jgifrkt8q" path="res://Assets/provided/foxy/foxy/fox/fox_defeat_1.png" id="2_cyjyk"]
+[ext_resource type="Texture2D" uid="uid://cpnrjocfgv50m" path="res://Assets/provided/foxy/foxy/fox/fox_hit_2.png" id="2_nkf0v"]
+[ext_resource type="Texture2D" uid="uid://bij01i1v7nb15" path="res://Assets/provided/foxy/foxy/fox/fox_hit_3.png" id="3_6gmph"]
+[ext_resource type="Texture2D" uid="uid://dc2m3jf8uguyu" path="res://Assets/provided/foxy/foxy/fox/fox_defeat_2.png" id="3_dycfg"]
+[ext_resource type="Texture2D" uid="uid://cm35jxqst3tye" path="res://Assets/provided/foxy/foxy/fox/fox_defeat_3.png" id="4_8atij"]
+[ext_resource type="Texture2D" uid="uid://cwgjo8l0lmemi" path="res://Assets/provided/foxy/foxy/fox/fox_idle_1.png" id="4_wgeer"]
+[ext_resource type="Texture2D" uid="uid://cdiupfoo5xr6u" path="res://Assets/provided/foxy/foxy/fox/fox_idle_2.png" id="5_3mf1s"]
+[ext_resource type="Texture2D" uid="uid://bunb4hruykt3x" path="res://Assets/provided/foxy/foxy/fox/fox_jump_1.png" id="6_eciy4"]
+[ext_resource type="Texture2D" uid="uid://dowo3wvh7rdu1" path="res://Assets/provided/foxy/foxy/fox/fox_jump_2.png" id="7_cyjyk"]
+[ext_resource type="Texture2D" uid="uid://ddf11anrulx6e" path="res://Assets/provided/foxy/foxy/fox/fox_walk_1.png" id="8_dycfg"]
+[ext_resource type="Texture2D" uid="uid://bsfb723jv8ohi" path="res://Assets/provided/foxy/foxy/fox/fox_walk_2.png" id="9_8atij"]
+[ext_resource type="Texture2D" uid="uid://bj3ls24dmb1u0" path="res://Assets/provided/foxy/foxy/fox/fox_walk_3.png" id="10_kpw3b"]
+[ext_resource type="Texture2D" uid="uid://c7b68c2t2m054" path="res://Assets/provided/foxy/foxy/fox/fox_walk_4.png" id="11_k6l5y"]
+[ext_resource type="PackedScene" uid="uid://hd35mbga866d" path="res://Resources/SFX.tscn" id="13_6gmph"]
+[ext_resource type="PackedScene" uid="uid://cm0fk06l1bys8" path="res://Resources/Items/Flashlight2D.tscn" id="14_wgeer"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpw3b"]
+atlas = ExtResource("2_cyjyk")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6l5y"]
+atlas = ExtResource("3_dycfg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6riq"]
+atlas = ExtResource("4_8atij")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpw2w"]
+atlas = ExtResource("1_8v5jh")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ul8d"]
+atlas = ExtResource("2_nkf0v")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y74dd"]
+atlas = ExtResource("3_6gmph")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7nek"]
+atlas = ExtResource("4_wgeer")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wucqy"]
+atlas = ExtResource("5_3mf1s")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aymmb"]
+atlas = ExtResource("6_eciy4")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fush"]
+atlas = ExtResource("7_cyjyk")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4e3xp"]
+atlas = ExtResource("8_dycfg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bvki"]
+atlas = ExtResource("9_8atij")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfuvh"]
+atlas = ExtResource("10_kpw3b")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nov3t"]
+atlas = ExtResource("11_k6l5y")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a6riq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpw3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6l5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6riq")
+}],
+"loop": true,
+"name": &"defeat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpw2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ul8d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y74dd")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7nek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wucqy")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aymmb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fush")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4e3xp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bvki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfuvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nov3t")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v7id3"]
+
+[node name="foxy_player" type="CharacterBody2D" unique_id=2062767952]
+script = ExtResource("1_nkf0v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1001878723]
+sprite_frames = SubResource("SpriteFrames_a6riq")
+animation = &"defeat"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1717155235]
+shape = SubResource("CapsuleShape2D_v7id3")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=321380354]
+
+[node name="Node" parent="." unique_id=253295282 instance=ExtResource("13_6gmph")]
+
+[node name="Flashlight2D" parent="." unique_id=449224485 instance=ExtResource("14_wgeer")]
