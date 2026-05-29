@@ -2,6 +2,9 @@ extends Area2D
 
 @export_file("*.tscn") var next_scene_path: String
 @export var target_spawn_id : String
+@export var DoorID: int = 0
+@export var Notification: CanvasLayer
+var is_notify: bool = false
 var player_inside := false
 
 func _ready():
@@ -12,7 +15,18 @@ func _ready():
 	body_exited.connect(_on_body_exited)
 
 func _process(delta):
+	if is_notify:
+		return 
+	#neu khong co den thi thong bao
 	if player_inside and Input.is_action_just_pressed(ButtonKey.interact):
+		if DoorID == 3:
+			if !InventorySystem.CheckObjectInInventory(KeyData.Light) and Notification != null:
+				is_notify = true
+				Notification.show()
+				await get_tree().create_timer(2.5).timeout
+				Notification.hide()
+				is_notify = false
+				return
 		print(next_scene_path)
 		GameManager.current_spawn_id = target_spawn_id
 		get_tree().change_scene_to_file(next_scene_path)

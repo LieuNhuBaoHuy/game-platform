@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://6ome0owgu01"]
+
+[ext_resource type="Script" uid="uid://dlfmwvm1hmh4" path="res://Scene/Objects/winning_point.gd" id="1_4p74j"]
+[ext_resource type="Texture2D" uid="uid://d145mscl1muqa" path="res://Assets/Objects/door.png" id="1_4vg6r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4p74j"]
+size = Vector2(20, 22)
+
+[node name="WinningPoint" type="Area2D"]
+script = ExtResource("1_4p74j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4vg6r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_4p74j")
+
+[connection signal="body_entered" from="." to="." method="_on_enter"]

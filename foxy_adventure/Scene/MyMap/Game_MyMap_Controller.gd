@@ -5,12 +5,17 @@ static var instance: Game_MyMap_Controller
 
 @export var player_camera: Camera2D
 @export var player_instance: BaseCharacter
+@export_file("*.ogg") var bg_music : String
 
 func _ready() -> void:
 	player_instance = get_parent().get_node("Player") as BaseCharacter
 	
 	_SetCamera()
 	_SetCameraLimit(327, -100, 517, 10000000000)
+	
+	MusicManager.play_music(bg_music)
+	
+	
 
 func _enter_tree() -> void:
 	# Khi Map vừa được load, Controller này sẽ tự đăng ký nó làm "Giám đốc"
@@ -24,6 +29,7 @@ func _exit_tree() -> void:
 	# Controller cũ cũng phải "từ chức" để nhường chỗ cho Controller của Map mới.
 	if instance == self:
 		instance = null
+	MusicManager.stop_music()
 		
 func _SetCamera() -> void:
 	var camera = $"../Player/Camera2D" as Camera2D

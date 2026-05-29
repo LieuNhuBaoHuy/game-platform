@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://wgnfgc6xgdhs"]
 
-[ext_resource type="Texture2D" uid="uid://bidl5brkimhxo" path="res://Assets/chest/chest_close_01.png" id="1_44s03"]
+[ext_resource type="Texture2D" uid="uid://bidl5brkimhxo" path="res://Assets/provided/island/objects/chest/chest_close_01.png" id="1_44s03"]
 [ext_resource type="Script" uid="uid://h6ynn4fmdbna" path="res://Scripts/Resource/Object/Chest.gd" id="1_urvte"]
-[ext_resource type="Texture2D" uid="uid://bjcqjfm23puad" path="res://Assets/chest/chest_close_02.png" id="2_urvte"]
-[ext_resource type="Texture2D" uid="uid://dqrogefu4p788" path="res://Assets/chest/chest_close_03.png" id="3_br0y2"]
-[ext_resource type="Texture2D" uid="uid://btnwd6wmuxmda" path="res://Assets/chest/chest_open_01.png" id="4_x5eyb"]
-[ext_resource type="Texture2D" uid="uid://dkn0i1fahffwr" path="res://Assets/chest/chest_open_02.png" id="5_a3ybm"]
-[ext_resource type="Texture2D" uid="uid://br8hwwry0gxvd" path="res://Assets/chest/chest_open_03.png" id="6_ebhgb"]
-[ext_resource type="Texture2D" uid="uid://b67b2vn864ieo" path="res://Assets/chest/chest_open_04.png" id="7_2nr8e"]
-[ext_resource type="Texture2D" uid="uid://bwcclik4ny1ry" path="res://Assets/chest/chest_open_05.png" id="8_yee82"]
+[ext_resource type="Texture2D" uid="uid://bjcqjfm23puad" path="res://Assets/provided/island/objects/chest/chest_close_02.png" id="2_urvte"]
+[ext_resource type="Texture2D" uid="uid://dqrogefu4p788" path="res://Assets/provided/island/objects/chest/chest_close_03.png" id="3_br0y2"]
+[ext_resource type="Texture2D" uid="uid://btnwd6wmuxmda" path="res://Assets/provided/island/objects/chest/chest_open_01.png" id="4_x5eyb"]
+[ext_resource type="Texture2D" uid="uid://dkn0i1fahffwr" path="res://Assets/provided/island/objects/chest/chest_open_02.png" id="5_a3ybm"]
+[ext_resource type="Texture2D" uid="uid://br8hwwry0gxvd" path="res://Assets/provided/island/objects/chest/chest_open_03.png" id="6_ebhgb"]
+[ext_resource type="Texture2D" uid="uid://b67b2vn864ieo" path="res://Assets/provided/island/objects/chest/chest_open_04.png" id="7_2nr8e"]
+[ext_resource type="Texture2D" uid="uid://bwcclik4ny1ry" path="res://Assets/provided/island/objects/chest/chest_open_05.png" id="8_yee82"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5bih1"]
 animations = [{

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://dpv3imscyvm2n"]
+[gd_scene load_steps=9 format=4 uid="uid://dpv3imscyvm2n"]
 
 [ext_resource type="PackedScene" uid="uid://omun3nby1qdl" path="res://Scene/Player/Player.tscn" id="1_6rhyq"]
 [ext_resource type="Texture2D" uid="uid://dfbcyoyxe24jp" path="res://Assets/island/background/background.png" id="1_kk6us"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dtijd0383er0r" path="res://Scene/Objects/SpawnPoint.tscn" id="4_nrudq"]
 [ext_resource type="PackedScene" uid="uid://bqqdx5wfv8j4b" path="res://Scene/Objects/DeathZone.tscn" id="5_kk6us"]
 [ext_resource type="PackedScene" uid="uid://y0ee7td5kew2" path="res://Scene/UI/ManualUI.tscn" id="7_4hnli"]
+[ext_resource type="PackedScene" uid="uid://djhjkhqjh7xjs" path="res://Scene/UI/Notification.tscn" id="8_ulr3d"]
 
 [node name="Hub" type="Node2D"]
 
@@ -36,9 +37,11 @@ target_spawn_id = "map1_spawn"
 position = Vector2(720, 292)
 next_scene_path = "uid://qs83wwuuvevi"
 
-[node name="Door3" parent="." instance=ExtResource("2_yqrtk")]
+[node name="Door3" parent="." node_paths=PackedStringArray("Notification") instance=ExtResource("2_yqrtk")]
 position = Vector2(439, 291)
 next_scene_path = "uid://c7mtyaemk80qq"
+DoorID = 3
+Notification = NodePath("../Notification")
 
 [node name="ResetPosition2" parent="." groups=["spawnpoint"] instance=ExtResource("4_nrudq")]
 position = Vector2(592, 313)
@@ -49,5 +52,8 @@ position = Vector2(-155, 280)
 scale = Vector2(5, 1)
 
 [node name="ManualUi" parent="." instance=ExtResource("7_4hnli")]
+
+[node name="Notification" parent="." instance=ExtResource("8_ulr3d")]
+visible = false
 
 [editable path="Player"]

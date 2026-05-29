@@ -1,12 +1,12 @@
-[gd_scene load_steps=23 format=4 uid="uid://cwbwocyphy2tv"]
+[gd_scene load_steps=25 format=4 uid="uid://cwbwocyphy2tv"]
 
 [ext_resource type="TileSet" uid="uid://cxruj6l0kxyg8" path="res://Assets/island/terrain/tileset2.tres" id="1_27og2"]
 [ext_resource type="PackedScene" uid="uid://c4f1jjndyxglw" path="res://Scene/Objects/Grass.tscn" id="1_83s7m"]
 [ext_resource type="PackedScene" uid="uid://c70o8vf6n025k" path="res://Scene/Objects/FullPalmTree.tscn" id="1_acht0"]
 [ext_resource type="PackedScene" uid="uid://omun3nby1qdl" path="res://Scene/Player/Player.tscn" id="1_m7dex"]
 [ext_resource type="Script" uid="uid://dpli8av6frgns" path="res://Scene/Objects/Tree.gd" id="2_s235h"]
-[ext_resource type="Texture2D" uid="uid://dcrnqve71d36p" path="res://Assets/island/background/additional_sky.png" id="3_s5wtc"]
-[ext_resource type="Texture2D" uid="uid://bqde0l4at7gv8" path="res://Assets/island/background/bg_image.png" id="4_acht0"]
+[ext_resource type="Texture2D" uid="uid://dcrnqve71d36p" path="res://Assets/provided/island/background/additional_sky.png" id="3_s5wtc"]
+[ext_resource type="Texture2D" uid="uid://bqde0l4at7gv8" path="res://Assets/provided/island/background/bg_image.png" id="4_acht0"]
 [ext_resource type="PackedScene" uid="uid://bpgi87bus7grr" path="res://Scene/Objects/Key.tscn" id="5_pcy5e"]
 [ext_resource type="PackedScene" uid="uid://be1ofbpsxne1j" path="res://Scene/Objects/FloatingEarth.tscn" id="5_r5k77"]
 [ext_resource type="PackedScene" uid="uid://bg68t06uajlbx" path="res://Scene/Door.tscn" id="6_h6cba"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://dje7yd60p726d" path="res://Scene/Objects/Chest.tscn" id="13_b1v2m"]
 [ext_resource type="PackedScene" uid="uid://dyhqj82qmbivk" path="res://Scene/Objects/Glass.tscn" id="20_wyq1l"]
 [ext_resource type="PackedScene" uid="uid://cgt1w0v6x36ma" path="res://Scene/Objects/Trap1.tscn" id="22_3hyrt"]
+[ext_resource type="PackedScene" uid="uid://dla01b042144" path="res://Scene/Sound/MusicManager.tscn" id="23_dsfgl"]
+[ext_resource type="PackedScene" uid="uid://hd35mbga866d" path="res://Scene/Sound/SFX.tscn" id="24_5dj0n"]
 
 [node name="Map3" type="Node2D"]
 
@@ -112,6 +114,7 @@ position = Vector2(2560, 147)
 
 [node name="GameController" type="Node2D" parent="."]
 script = ExtResource("7_f8k3n")
+bg_music = "uid://0cu2yfdmugja"
 
 [node name="UIController" type="Node2D" parent="." node_paths=PackedStringArray("InventoryPanel", "ObjectName", "ObjectAva", "ObjectDes", "UseButton", "InventoryParent")]
 process_mode = 3
@@ -136,6 +139,10 @@ ItemInside = ExtResource("20_wyq1l")
 
 [node name="Trap1" parent="." instance=ExtResource("22_3hyrt")]
 position = Vector2(2612, 281)
+
+[node name="MusicManager" parent="." instance=ExtResource("23_dsfgl")]
+
+[node name="Node" parent="." instance=ExtResource("24_5dj0n")]
 
 [connection signal="body_entered" from="FullPalmTree/TopPalmTree/Area2D" to="FullPalmTree" method="_on_body_entered"]
 

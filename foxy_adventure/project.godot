@@ -23,6 +23,7 @@ EventSystem="*res://Scripts/Event/EventSystem.gd"
 InitializeScene="*res://Scene/MyMap/InitializeScene.tscn"
 sfx="*res://Scripts/Music/SFX.gd"
 MusicManager="*res://Scene/Sound/MusicManager.tscn"
+SfxLoop="*res://Scripts/SFX_loop.gd"
 
 [editor_plugins]
 

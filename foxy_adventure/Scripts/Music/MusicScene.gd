@@ -4,3 +4,6 @@ extends Node2D
 
 func _ready():
 	MusicManager.play_music(bg_music)
+
+func _exit_tree() -> void:
+	MusicManager.stop_music()

@@ -177,7 +177,7 @@ func try_jump() -> void:
 	velocity.y = jump_velocity
 	jump_count += 1
 	if jump_sfx_path != "":
-		SFX_loop.play(jump_sfx_path, jump_sfx_volume_db)
+		SfxLoop.play(jump_sfx_path, jump_sfx_volume_db)
 	change_state(PlayerState.JUMP)
 
 

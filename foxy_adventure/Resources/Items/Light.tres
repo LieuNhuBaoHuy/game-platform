@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Object_Data" load_steps=3 format=3 uid="uid://js51qmc6uies"]
+
+[ext_resource type="Texture2D" uid="uid://cki4tx4v1n01o" path="res://Assets/Objects/light.png" id="1_ojb2x"]
+[ext_resource type="Script" uid="uid://cvd6160ujjt3w" path="res://Scripts/Resource/Object/Object.gd" id="1_yrr43"]
+
+[resource]
+script = ExtResource("1_yrr43")
+IDObject = 4
+ObjectName = "Light of freedom"
+ObjectImage = ExtResource("1_ojb2x")
+ObjectDescription = "Reveal what inside the dark"
+CanBeUse = false
+WillBeDelateAfterUse = true
+metadata/_custom_type_script = "uid://cvd6160ujjt3w"

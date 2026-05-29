@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d3mjsoww6hydv"]
+[gd_scene load_steps=34 format=3 uid="uid://d3mjsoww6hydv"]
 
 [ext_resource type="Texture2D" uid="uid://bcpoenc50cm6f" path="res://Assets/provided/foxy/foxy/fox/fox_hit_1.png" id="1_8v5jh"]
 [ext_resource type="Script" uid="uid://dds6grh68yxlp" path="res://Scripts/player_control.gd" id="1_nkf0v"]
@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bsfb723jv8ohi" path="res://Assets/provided/foxy/foxy/fox/fox_walk_2.png" id="9_8atij"]
 [ext_resource type="Texture2D" uid="uid://bj3ls24dmb1u0" path="res://Assets/provided/foxy/foxy/fox/fox_walk_3.png" id="10_kpw3b"]
 [ext_resource type="Texture2D" uid="uid://c7b68c2t2m054" path="res://Assets/provided/foxy/foxy/fox/fox_walk_4.png" id="11_k6l5y"]
-[ext_resource type="PackedScene" uid="uid://hd35mbga866d" path="res://Resources/SFX.tscn" id="13_6gmph"]
+[ext_resource type="PackedScene" uid="uid://hd35mbga866d" path="res://Scene/Sound/SFX.tscn" id="13_6gmph"]
 [ext_resource type="PackedScene" uid="uid://cm0fk06l1bys8" path="res://Resources/Items/Flashlight2D.tscn" id="14_wgeer"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpw3b"]
@@ -146,18 +146,18 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v7id3"]
 
-[node name="foxy_player" type="CharacterBody2D" unique_id=2062767952]
+[node name="foxy_player" type="CharacterBody2D"]
 script = ExtResource("1_nkf0v")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1001878723]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_a6riq")
 animation = &"defeat"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1717155235]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_v7id3")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=321380354]
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Node" parent="." unique_id=253295282 instance=ExtResource("13_6gmph")]
+[node name="Node" parent="." instance=ExtResource("13_6gmph")]
 
-[node name="Flashlight2D" parent="." unique_id=449224485 instance=ExtResource("14_wgeer")]
+[node name="Flashlight2D" parent="." instance=ExtResource("14_wgeer")]
