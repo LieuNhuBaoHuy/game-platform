@@ -1,28 +1,28 @@
 [gd_scene load_steps=34 format=3 uid="uid://d3mjsoww6hydv"]
 
-[ext_resource type="Texture2D" uid="uid://bcpoenc50cm6f" path="res://Assets/provided/foxy/foxy/fox/fox_hit_1.png" id="1_8v5jh"]
 [ext_resource type="Script" uid="uid://dds6grh68yxlp" path="res://Scripts/player_control.gd" id="1_nkf0v"]
-[ext_resource type="Texture2D" uid="uid://dkv1jgifrkt8q" path="res://Assets/provided/foxy/foxy/fox/fox_defeat_1.png" id="2_cyjyk"]
-[ext_resource type="Texture2D" uid="uid://cpnrjocfgv50m" path="res://Assets/provided/foxy/foxy/fox/fox_hit_2.png" id="2_nkf0v"]
-[ext_resource type="Texture2D" uid="uid://bij01i1v7nb15" path="res://Assets/provided/foxy/foxy/fox/fox_hit_3.png" id="3_6gmph"]
-[ext_resource type="Texture2D" uid="uid://dc2m3jf8uguyu" path="res://Assets/provided/foxy/foxy/fox/fox_defeat_2.png" id="3_dycfg"]
-[ext_resource type="Texture2D" uid="uid://cm35jxqst3tye" path="res://Assets/provided/foxy/foxy/fox/fox_defeat_3.png" id="4_8atij"]
-[ext_resource type="Texture2D" uid="uid://cwgjo8l0lmemi" path="res://Assets/provided/foxy/foxy/fox/fox_idle_1.png" id="4_wgeer"]
-[ext_resource type="Texture2D" uid="uid://cdiupfoo5xr6u" path="res://Assets/provided/foxy/foxy/fox/fox_idle_2.png" id="5_3mf1s"]
-[ext_resource type="Texture2D" uid="uid://bunb4hruykt3x" path="res://Assets/provided/foxy/foxy/fox/fox_jump_1.png" id="6_eciy4"]
-[ext_resource type="Texture2D" uid="uid://dowo3wvh7rdu1" path="res://Assets/provided/foxy/foxy/fox/fox_jump_2.png" id="7_cyjyk"]
-[ext_resource type="Texture2D" uid="uid://ddf11anrulx6e" path="res://Assets/provided/foxy/foxy/fox/fox_walk_1.png" id="8_dycfg"]
-[ext_resource type="Texture2D" uid="uid://bsfb723jv8ohi" path="res://Assets/provided/foxy/foxy/fox/fox_walk_2.png" id="9_8atij"]
-[ext_resource type="Texture2D" uid="uid://bj3ls24dmb1u0" path="res://Assets/provided/foxy/foxy/fox/fox_walk_3.png" id="10_kpw3b"]
-[ext_resource type="Texture2D" uid="uid://c7b68c2t2m054" path="res://Assets/provided/foxy/foxy/fox/fox_walk_4.png" id="11_k6l5y"]
-[ext_resource type="PackedScene" uid="uid://hd35mbga866d" path="res://Scene/Sound/SFX.tscn" id="13_6gmph"]
+[ext_resource type="Texture2D" uid="uid://m4di78taixns" path="res://Assets/provided/foxy/foxy/fox_hat/fox_defeat_1.png" id="2_cyjyk"]
+[ext_resource type="Texture2D" uid="uid://b6jgthsrynctr" path="res://Assets/provided/foxy/foxy/fox_hat/fox_defeat_2.png" id="3_dycfg"]
+[ext_resource type="Texture2D" uid="uid://fii540ugfj5n" path="res://Assets/provided/foxy/foxy/fox_hat/fox_defeat_3.png" id="4_8atij"]
+[ext_resource type="Texture2D" uid="uid://yom7r0j05to2" path="res://Assets/provided/foxy/foxy/fox_hat/fox_hit_1.png" id="5_kpw3b"]
+[ext_resource type="Texture2D" uid="uid://ck8edmupc3gra" path="res://Assets/provided/foxy/foxy/fox_hat/fox_hit_2.png" id="6_k6l5y"]
+[ext_resource type="Texture2D" uid="uid://bqh3qhrimo17x" path="res://Assets/provided/foxy/foxy/fox_hat/fox_hit_3.png" id="7_rpw2w"]
+[ext_resource type="Texture2D" uid="uid://b2iyrbygs0b7c" path="res://Assets/provided/foxy/foxy/fox_hat/fox_idle_1.png" id="8_1ul8d"]
+[ext_resource type="Texture2D" uid="uid://c8uke6n7xj17g" path="res://Assets/provided/foxy/foxy/fox_hat/fox_idle_2.png" id="9_y74dd"]
+[ext_resource type="Texture2D" uid="uid://b7ko4rnci3koo" path="res://Assets/provided/foxy/foxy/fox_hat/fox_jump_1.png" id="10_u7nek"]
+[ext_resource type="Texture2D" uid="uid://6gko14qsmmw4" path="res://Assets/provided/foxy/foxy/fox_hat/fox_jump_2.png" id="11_wucqy"]
+[ext_resource type="Texture2D" uid="uid://cseha0dkj5lfj" path="res://Assets/provided/foxy/foxy/fox_hat/fox_walk_1.png" id="12_aymmb"]
+[ext_resource type="PackedScene" uid="uid://hd35mbga866d" path="res://Resources/SFX_loop.tscn" id="13_6gmph"]
+[ext_resource type="Texture2D" uid="uid://3g5hdrfwcd2c" path="res://Assets/provided/foxy/foxy/fox_hat/fox_walk_2.png" id="13_7fush"]
+[ext_resource type="Texture2D" uid="uid://cg0s41812vukj" path="res://Assets/provided/foxy/foxy/fox_hat/fox_walk_3.png" id="14_4e3xp"]
 [ext_resource type="PackedScene" uid="uid://cm0fk06l1bys8" path="res://Resources/Items/Flashlight2D.tscn" id="14_wgeer"]
+[ext_resource type="Texture2D" uid="uid://8u26ji11yaua" path="res://Assets/provided/foxy/foxy/fox_hat/fox_walk_4.png" id="15_3bvki"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kpw3b"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfuvh"]
 atlas = ExtResource("2_cyjyk")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k6l5y"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nov3t"]
 atlas = ExtResource("3_dycfg")
 region = Rect2(0, 0, 64, 64)
 
@@ -30,58 +30,58 @@ region = Rect2(0, 0, 64, 64)
 atlas = ExtResource("4_8atij")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rpw2w"]
-atlas = ExtResource("1_8v5jh")
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7id3"]
+atlas = ExtResource("5_kpw3b")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ul8d"]
-atlas = ExtResource("2_nkf0v")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ki4m2"]
+atlas = ExtResource("6_k6l5y")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y74dd"]
-atlas = ExtResource("3_6gmph")
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0of3"]
+atlas = ExtResource("7_rpw2w")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u7nek"]
-atlas = ExtResource("4_wgeer")
+[sub_resource type="AtlasTexture" id="AtlasTexture_vq0in"]
+atlas = ExtResource("8_1ul8d")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wucqy"]
-atlas = ExtResource("5_3mf1s")
+[sub_resource type="AtlasTexture" id="AtlasTexture_uga6i"]
+atlas = ExtResource("9_y74dd")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_aymmb"]
-atlas = ExtResource("6_eciy4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_21sug"]
+atlas = ExtResource("10_u7nek")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7fush"]
-atlas = ExtResource("7_cyjyk")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4sght"]
+atlas = ExtResource("11_wucqy")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4e3xp"]
-atlas = ExtResource("8_dycfg")
+[sub_resource type="AtlasTexture" id="AtlasTexture_bh0yr"]
+atlas = ExtResource("12_aymmb")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3bvki"]
-atlas = ExtResource("9_8atij")
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4mje"]
+atlas = ExtResource("13_7fush")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hfuvh"]
-atlas = ExtResource("10_kpw3b")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hq4g7"]
+atlas = ExtResource("14_4e3xp")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nov3t"]
-atlas = ExtResource("11_k6l5y")
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5wf2"]
+atlas = ExtResource("15_3bvki")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a6riq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kpw3b")
+"texture": SubResource("AtlasTexture_hfuvh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k6l5y")
+"texture": SubResource("AtlasTexture_nov3t")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_a6riq")
@@ -92,13 +92,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rpw2w")
+"texture": SubResource("AtlasTexture_v7id3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1ul8d")
+"texture": SubResource("AtlasTexture_ki4m2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y74dd")
+"texture": SubResource("AtlasTexture_n0of3")
 }],
 "loop": true,
 "name": &"hit",
@@ -106,10 +106,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u7nek")
+"texture": SubResource("AtlasTexture_vq0in")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wucqy")
+"texture": SubResource("AtlasTexture_uga6i")
 }],
 "loop": true,
 "name": &"idle",
@@ -117,10 +117,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_aymmb")
+"texture": SubResource("AtlasTexture_21sug")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7fush")
+"texture": SubResource("AtlasTexture_4sght")
 }],
 "loop": true,
 "name": &"jump",
@@ -128,16 +128,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4e3xp")
+"texture": SubResource("AtlasTexture_bh0yr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3bvki")
+"texture": SubResource("AtlasTexture_p4mje")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hfuvh")
+"texture": SubResource("AtlasTexture_hq4g7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nov3t")
+"texture": SubResource("AtlasTexture_b5wf2")
 }],
 "loop": true,
 "name": &"walk",
@@ -151,7 +151,7 @@ script = ExtResource("1_nkf0v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_a6riq")
-animation = &"defeat"
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_v7id3")
